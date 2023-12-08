@@ -3,9 +3,11 @@ module.exports = function (api) {
   return {
     presets: [
       "babel-preset-expo",
+    ],
+    overrides: [
       {
         test: /@?(ui-kitten|eva-design).*\.(ts|js)x?$/,
-        loader: "babel-loader",
+        presets: ["babel-preset-expo"],
       },
     ],
   };
